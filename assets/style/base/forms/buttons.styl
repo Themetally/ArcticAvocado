@@ -1,23 +1,35 @@
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"]
+$button
 	border: 0
 	background-color: $black
 	color: $white
 	padding: 0.5gr 1gr
 	line-height: auto
 	outline: 0
-
-	&:hover,
-	&:active,
-	&:focus
-		background-color: $dark
-		color: $white
-
+	border-radius: 1.4rem
 
 $button--small
 	padding: .25gr 1gr
 	line-height: auto
 	text-decoration: none
 	border: 1px solid $light
+
+
+$button--light
+	background-color: $white
+	color: $dark
+
+	&:focus
+		background-color: $bright
+
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]
+	@extend $button
+
+	&:hover,
+	&:active,
+	&:focus
+		background-color: $dark
+		color: $white

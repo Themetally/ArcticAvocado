@@ -18,9 +18,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-thumbnail">
-		<?php the_post_thumbnail( 'unstyled-blog' ); ?>
-	</div>
+
 
 	<div class="entry-content">
 		<?php
@@ -45,7 +43,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php unstyled_entry_footer(); ?>
+		<?php unstyled_the_tags(); ?>
 	</footer><!-- .entry-footer -->
 
 </article>

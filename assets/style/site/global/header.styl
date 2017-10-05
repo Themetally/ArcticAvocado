@@ -3,11 +3,29 @@
  *-------------------------------------------------------------- */
 .site-header
 	position: relative
-	padding: 4gr 0
+	padding: 2gr
+	margin-bottom: 4gr
 
-.site-branding
-	text-align: center
-	margin-bottom: 1gr
+	background-color: $accent
+
+	&, a
+		color: $white
+
+	.button
+		@extends $button--light
+
+
+	@media $lap
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+@media $palm
+	.site-branding
+		margin-bottom: 1gr
+
+
+
 
 .custom-logo-link
 	display: block

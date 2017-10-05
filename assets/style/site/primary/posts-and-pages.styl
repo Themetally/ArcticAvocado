@@ -12,19 +12,31 @@
 		&:hover
 			opacity: .8
 
-.category-links
-	margin-bottom: 1gr
 
 .entry-title
-	margin-bottom: 1gr
 	font-size: 3sx
 	line-height: auto
+	margin-top: .5gr
+	margin-bottom: .5gr
 
 .entry-header
 	margin-bottom: 1gr
 
-.entry-meta, .entry-footer
+	.category-links
+		font-weight: 300
+		letter-spacing: -.01em
+		smooth-fonts()
+		&, a
+			color: $gray_light
+
+
+
+.entry-meta
 	margin-bottom: 1gr
+	line-height: auto
+	smooth-fonts()
+	&, a
+		color: $gray_light
 
 .featured-image
 	margin-bottom: 1gr
@@ -37,16 +49,11 @@
  * Byline, Comments, Edit link
  *--------------------------------------------------------------*/
 .byline::after
-	content: "|"
 	margin: 0 .25gr
 
 .comments-link, .edit-link
 	&::before
-		content: "|"
 		margin: 0 .25gr
-
-.byline, .updated:not(.published)
-	display: none
 
 .single, .group-blog
 	.byline

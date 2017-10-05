@@ -1,8 +1,19 @@
-// Add a bit of spacing in between posts
-.post
-	margin-bottom: 8gr
-
 // theme-check requries sticky styles
 .sticky
-	background-color: $bright
+	background-color: transparentify($bright, 0.02)
 	padding: 1gr
+
+.blog .post
+
+	border-bottom: 4px solid $light
+	padding-bottom: 3gr
+	margin-bottom: 3gr
+
+	.wp-post-image
+		margin-bottom: 1gr
+
+	.read-more
+		text-transform: uppercase
+		font-weight: 700
+		font-family: $font_alt
+
