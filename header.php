@@ -17,9 +17,9 @@
 		
 		<?php get_template_part( 'partials/header/branding' ) ?>
 
-		<nav id="site-navigation" class="site-navigation" role="navigation">
-			<?php get_template_part( 'partials/header/navigation' ) ?>
-		</nav><!-- #site-navigation -->
+		<nav id="site-menu" class="site-menu" role="navigation">
+			<?php get_template_part( 'partials/header/menu' ) ?>
+		</nav><!-- #site-menu -->
 
 	</header><!-- #header -->
 
