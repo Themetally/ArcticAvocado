@@ -25,10 +25,10 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
-	<footer class="entry-meta">
+	<footer class="entry-footer">
 		<?php unstyled_posted_on(); ?>
+		<a href="<?php the_permalink() ?>" class="read-more"><?php esc_html_e( 'Read More', 'MELON_TXT' ); ?></a>
 	</footer><!-- .entry-footer -->
 
-	<a href="<?php the_permalink() ?>" class="read-more"><?php esc_html_e( 'Read More', 'MELON_TXT' ); ?></a>
 
 </article><!-- #post-<?php the_ID(); ?> -->
