@@ -6,29 +6,28 @@
  *
  * @package Unstyled
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header">
-
+	<div class="entry-header">
 		<?php unstyled_the_category_list(); ?>
-
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-	</header><!-- .entry-header -->
-
-	<?php the_post_thumbnail( 'unstyled-blog' ) ?>
+		<?php the_post_thumbnail( unstyled_get_dynamic_thumbnail_size() ) ?>
+	</div>
 
 	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-	<footer class="entry-footer">
-		<?php unstyled_posted_on(); ?>
-		<a href="<?php the_permalink() ?>" class="read-more"><?php esc_html_e( 'Read More', 'MELON_TXT' ); ?></a>
-	</footer><!-- .entry-footer -->
+		<div class="entry-excerpt">
+			<?php the_excerpt(); ?>
+		</div>
+
+		<footer class="entry-footer">
+			<?php unstyled_posted_on(); ?>
+			<a href="<?php the_permalink() ?>" class="read-more"><?php esc_html_e( 'Read More', 'MELON_TXT' ); ?></a>
+		</footer><!-- .entry-footer -->
+
+	</div><!-- .entry-summary -->
 
 
 </article><!-- #post-<?php the_ID(); ?> -->

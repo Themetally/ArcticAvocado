@@ -18,7 +18,14 @@ function unstyled_setup() {
 	/**
 	 * Add image sizes
 	 */
-	add_image_size( 'unstyled-blog', $GLOBALS['content_width'], NULL, false );
+	$ratio        = 4 / 3;
+	$large_width  = $GLOBALS['content_width'];
+	$large_height = $large_width / $ratio;
+	$small_width  = $large_width / 3;
+	$small_height = $small_width / $ratio;
+
+	add_image_size( 'unstyled-blog-large', $large_width, $large_height, true );
+	add_image_size( 'unstyled-blog-small', $small_width, $small_height, true );
 
 
 	/**
@@ -108,7 +115,7 @@ function unstyled_add_theme_supports() {
  */
 function unstyled_content_width() {
 
-	$GLOBALS['content_width'] = apply_filters( 'unstyled_content_width', 960 );
+	$GLOBALS['content_width'] = apply_filters( 'unstyled_content_width', 1200 );
 }
 
 

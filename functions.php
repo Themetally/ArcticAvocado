@@ -6,6 +6,8 @@ $__DIR = get_template_directory();
  * Load theme functions
  */
 require_once $__DIR . '/inc/theme/functions-google-fonts.php';
+require_once $__DIR . '/inc/theme/functions-helpers.php';
+
 
 
 /**

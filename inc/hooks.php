@@ -8,12 +8,17 @@
  */
 
 // Quite likely you'll want to uncomment this:
-//function unstyled_body_classes( $classes ) {
-//
-//	return $classes;
-//}
-//
-//add_filter( 'body_class', 'unstyled_body_classes' );
+function unstyled_body_classes( $classes ) {
+
+	if ( is_active_sidebar( 'sidebar' ) ) {
+		$classes[] = 'has-sidebar';
+	}
+
+
+	return $classes;
+}
+
+add_filter( 'body_class', 'unstyled_body_classes' );
 
 
 /**
@@ -38,3 +43,11 @@ function unstyled_excerpt_more( $more ) {
 }
 
 add_filter( 'excerpt_more', 'unstyled_excerpt_more' );
+
+
+
+/* Change Excerpt length */
+function unstyled_adjust_excerpt_length( $length ) {
+	return 21;
+}
+add_filter( 'excerpt_length', 'unstyled_adjust_excerpt_length' );
