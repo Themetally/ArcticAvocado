@@ -48,6 +48,11 @@ add_filter( 'excerpt_more', 'unstyled_excerpt_more' );
 
 /* Change Excerpt length */
 function unstyled_adjust_excerpt_length( $length ) {
+
+	if( unstyled_is_first_post() ) {
+		return $length;
+	}
+
 	return 21;
 }
 add_filter( 'excerpt_length', 'unstyled_adjust_excerpt_length' );
