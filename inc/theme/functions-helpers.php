@@ -6,8 +6,9 @@
 function unstyled_is_first_post() {
 
 	global $wp_query;
+	global $paged;
 
-	return ( 0 == $wp_query->current_post );
+	return ( 0 == $wp_query->current_post && 0 == $paged );
 }
 
 
