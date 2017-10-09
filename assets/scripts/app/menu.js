@@ -29,11 +29,10 @@ $( document ).on( 'click', '.menu-toggle', function ( e ) {
 
 } )
 
-$( document ).on( 'click', '.page_item_has_children > a, .menu_item_has_child' +
-    'ren > a', function ( e ) {
+$( document ).on( 'click', '.menu-item-has-children > a', function ( e ) {
     let $el       = $( this )
     let $parent   = $el.parent()
-    let $dropdown = $parent.find( '> .children' )
+    let $dropdown = $parent.find( '> .sub-menu' )
 
     if ( !$dropdown.length ) {
         return // no children, no dropdown action

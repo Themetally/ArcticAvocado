@@ -3,6 +3,7 @@
 
 @media $portable
 	.site-menu__inner
+		layer(menu)
 		position: fixed
 		background-color: $white
 		padding: 1gr
@@ -22,27 +23,25 @@
 		clear: both
 		.menu
 			font-size: 1sx
-			font-family: $font_alt
 			font-weight: 700
 
-		.is-open > ul
-			display: block
 
 		.menu > ul
 			max-width: 20rem
 			margin-left: auto
 			margin-right: auto
 
-		.menu ul ul
+		.sub-menu
 			font-size: 0sx
 			font-weight: 400
+
+		.sub-menu .sub-menu
+			padding-left: 1gr
+			padding-top: 0
+
 		ul
-			text-align: left
-			list-style: none
-			margin: 0
 			padding-top: 1gr
 			padding-left: 0
-			display: none
 
 			li
 				position: relative
@@ -52,58 +51,21 @@
 				&:focus > ul
 					left: auto
 
-		.children
-			layer(menu)
-			top: 1gr
-			margin-top: 1px
-			margin-right: -1px
-			padding-top: 0
-
-			li
-				&:hover > ul,
-				&.focus > ul
-					left: 100%
-				a
-					padding-left: .5gr
-					&:before
-						content: "- "
-				li
-					a
-						padding-left: 1gr
-
 		a
 			display: inline-block
 			width: 100%
 			padding: .25gr 0
 			text-decoration: none
 
-
-		.current_page_item > a,
-		.current-menu-item > a,
-		.current_page_ancestor > a,
-		.current-menu-ancestor > a
-		.menu-item-has-children,
-		.page_item_has_children
-			min-width: 218px
-
-		.menu-item-has-children > a,
-		.page_item_has_children > a
-			padding-right: 1.5gr
-
-			display: flex
-
-			&::after
-				content: "+"
-				margin-left: auto
-
-		.is-open > a:after
-			content: '–'
-
+		.menu-item-has-children
+			min-width: 14rem
 
 		.menu-toggle
 			margin-left: auto
 			margin-right: auto
 			display: block
+
+
 
 	.menu-toggle--close
 		background-color: $gray_light
