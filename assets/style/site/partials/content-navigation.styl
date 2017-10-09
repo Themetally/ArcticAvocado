@@ -5,14 +5,14 @@
 .posts-navigation,
 .post-navigation,
 .paging-navigation
-	background-color: $white
-	padding: 1gr
-	font-weight: 700
-	border-radius: 2px
+	margin-top: 3gr
 
 	.nav-links
 		display: flex
-		justify-content: space-between
+		justify-content: center
 
-	.nav-next
-		margin-left: auto
+	.nav-links a
+		@extends $button
+
+	.nav-previous
+		margin-right: 1gr
