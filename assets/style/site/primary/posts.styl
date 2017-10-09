@@ -16,13 +16,6 @@
 		width: 100%
 
 
-
-	//@TODO:
-	// align footer to bottom
-	.entry-summary
-		display: flex
-		flex-direction: column
-
 +hasgrid()
 	.blog .site-content
 		display: grid
@@ -45,38 +38,27 @@
 			margin: 0
 			border-bottom: 4px solid $text_color
 
-		.post:first-child
-			grid-column: 1 / -1
-			display: grid
-			grid-column-gap: 1gr
-			grid-template-columns: 5fr minmax(15rem, 2fr)
-			grid-template-rows: 2gr 12rem minmax(8rem, 1fr)
 
-			@media $large_desk
-				grid-column: span 3
-			@media $lap
-				grid-template-rows: 2gr 15rem minmax(4rem, 1fr)
-			@media $palm
-				display: block
-
-			.entry-header
-				grid-column: 1
-				grid-row: 1 / -1
+		@media $large_desk
+			.post:first-child
+				grid-column: 1 / -1
 				display: flex
-				flex-direction: column
-				img
+				grid-column: span 3
+
+				.entry-header
+					flex: 6
+					display: flex
+					flex-direction: column
+					img
+						margin: 0
+						object-fit: cover
+						flex: 1
+
+				.entry-summary
+					flex: 3
+					padding: 2gr
+					align-self: center
+
+				.entry-footer
 					margin: 0
-					object-fit: cover
-					flex: 1
-
-			.entry-summary
-				grid-column: 2
-				grid-row: 2
-				margin: 0
-
-			.entry-footer
-				grid-column: 2
-				grid-row: 3
-				margin: 0
-
 
