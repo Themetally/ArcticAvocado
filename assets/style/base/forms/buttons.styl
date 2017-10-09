@@ -2,12 +2,20 @@ $button
 	border: 0
 	background-color: $black
 	color: $white
-	padding: 0.5gr 1gr
+	padding: 0.5gr 1.5gr
 	line-height: auto
 	outline: 0
-	border-radius: 1.4rem
+	border-radius: 2em
+	transition: all .48s ease
+
+	&:hover
+		background-color: lighten($black, 15)
+
+	&:focus
+		background-color: lighten($black, 25)
 
 $button--small
+	@extend $button
 	padding: .25gr 1gr
 	line-height: auto
 	text-decoration: none
@@ -15,6 +23,7 @@ $button--small
 
 
 $button--light
+	@extend $button
 	background-color: $white
 	color: $dark
 
