@@ -1,18 +1,44 @@
+.site-menu__inner
+	position: fixed
+	background-color: $white
+	padding: 1gr
+	right: 0
+	top: 0
+	width: 100%
+	height: 100vh
+	overflow-y: scroll
+
+	display: none
+
+	&.is-open, &.is-open .menu > ul
+		display: block
+
+
+
 .site-menu
-	display: block
 	clear: both
-	position: relative
+	.menu
+		font-size: 1sx
+		font-family: $font_alt
+		font-weight: 700
 
 	.is-open > ul
 		display: block
 
+	.menu > ul
+		max-width: 20rem
+		margin-left: auto
+		margin-right: auto
+
+	.menu ul ul
+		font-size: 0sx
+		font-weight: 400
 	ul
 		text-align: left
 		list-style: none
 		margin: 0
 		padding-top: 1gr
 		padding-left: 0
-
 		display: none
 
 		li
@@ -74,3 +100,7 @@
 .menu-toggle
 	margin-left: auto
 	margin-right: auto
+	display: block
+
+.menu-toggle--close
+	background-color: $gray_light

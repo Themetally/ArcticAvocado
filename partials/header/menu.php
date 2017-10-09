@@ -2,4 +2,8 @@
 		'Menu',
 		'unstyled'
 	); ?></button>
-<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+
+<div id="primary-menu" class="site-menu__inner">
+	<button id="site-menu-close" class="menu-toggle menu-toggle--close button">Close Menu</button>
+	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+</div>

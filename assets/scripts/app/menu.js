@@ -29,7 +29,8 @@ $( document ).on( 'click', '.menu-toggle', function ( e ) {
 
 } )
 
-$( document ).on( 'click', '.page_item_has_children > a, .menu_item_has_children > a', function ( e ) {
+$( document ).on( 'click', '.page_item_has_children > a, .menu_item_has_child' +
+    'ren > a', function ( e ) {
     let $el       = $( this )
     let $parent   = $el.parent()
     let $dropdown = $parent.find( '> .children' )
@@ -43,4 +44,13 @@ $( document ).on( 'click', '.page_item_has_children > a, .menu_item_has_children
     }
 
 
+} )
+
+/*
+    Listen for the ESC Key and close the menu
+ */
+$( document ).on( 'keyup', function ( e ) {
+    if ( e.key === 'Escape' && $( '#primary-menu.is-open' ).length > 0 ) {
+        toggle( $( '#primary-menu' ) )
+    }
 } )
