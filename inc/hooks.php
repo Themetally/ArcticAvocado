@@ -1,4 +1,15 @@
 <?php
+
+function unstyled_is_blog_archive() {
+
+	return (
+		'post' == get_post_type()
+		&&
+		( is_home() || is_author() || is_category() || is_tag() || is_date() )
+	);
+}
+
+
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -6,12 +17,15 @@
  *
  * @return array
  */
-
 // Quite likely you'll want to uncomment this:
 function unstyled_body_classes( $classes ) {
 
 	if ( is_active_sidebar( 'sidebar' ) ) {
 		$classes[] = 'has-sidebar';
+	}
+
+	if ( unstyled_is_blog_archive() ) {
+		$classes[] = 'full-width';
 	}
 
 
@@ -45,9 +59,10 @@ function unstyled_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'unstyled_excerpt_more' );
 
 
-
 /* Change Excerpt length */
 function unstyled_adjust_excerpt_length( $length ) {
+
 	return 21;
 }
+
 add_filter( 'excerpt_length', 'unstyled_adjust_excerpt_length' );

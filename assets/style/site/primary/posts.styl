@@ -18,6 +18,7 @@
 
 +hasgrid()
 	.blog .site-content
+		width: 100%
 		display: grid
 		grid-gap: 1gr
 		align-content: start
@@ -36,29 +37,32 @@
 			background-color: $white
 			padding: 1gr
 			margin: 0
-			border-bottom: 4px solid $text_color
+			border-bottom: 4px solid $dark
+			border-radius: 2px
+			grid-column: span 1
 
+		.posts-navigation
+			grid-column: 1 / -1
 
-		@media $large_desk
-			.post:first-child
-				grid-column: 1 / -1
+	@media $large_desk
+		.blog:not(.paged) .post:first-child
+			display: flex
+			grid-column: span 3
+
+			.entry-header
+				flex: 6
 				display: flex
-				grid-column: span 3
-
-				.entry-header
-					flex: 6
-					display: flex
-					flex-direction: column
-					img
-						margin: 0
-						object-fit: cover
-						flex: 1
-
-				.entry-summary
-					flex: 3
-					padding: 2gr
-					align-self: center
-
-				.entry-footer
+				flex-direction: column
+				img
 					margin: 0
+					object-fit: cover
+					flex: 1
+
+			.entry-summary
+				flex: 3
+				padding: 2gr
+				align-self: center
+
+			.entry-footer
+				margin: 0
 
