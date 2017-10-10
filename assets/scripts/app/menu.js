@@ -1,4 +1,5 @@
 let $ = jQuery
+let $document = $(document)
 
 
 const open = ( $el ) => {
@@ -18,18 +19,11 @@ const toggle = ( $el ) => {
     return func( $el )
 }
 
-$( document ).on( 'click', '.menu-toggle', function ( e ) {
 
-    let $el       = $( this )
-    let $dropdown = $( '#primary-menu' )
-
-    if ( toggle( $dropdown ) ) {
-        e.preventDefault()
-    }
-
-} )
-
-$( document ).on( 'click', '.menu-item-has-children > a', function ( e ) {
+/*
+    Open Dropdowns
+ */
+$document.on( 'click', '.menu-item-has-children > a', function ( e ) {
     let $el       = $( this )
     let $parent   = $el.parent()
     let $dropdown = $parent.find( '> .sub-menu' )
@@ -45,11 +39,36 @@ $( document ).on( 'click', '.menu-item-has-children > a', function ( e ) {
 
 } )
 
+
+/*
+    Toggle the responsive menu popup
+ */
+$document.on( 'click', '.menu-toggle', function ( e ) {
+
+    let $el       = $( this )
+    let $dropdown = $( '#primary-menu' )
+
+    if ( toggle( $dropdown ) ) {
+        e.preventDefault()
+    }
+
+} )
+
 /*
     Listen for the ESC Key and close the menu
  */
-$( document ).on( 'keyup', function ( e ) {
-    if ( e.key === 'Escape' && $( '#primary-menu.is-open' ).length > 0 ) {
-        toggle( $( '#primary-menu' ) )
+$document.on( 'keyup', function ( e ) {
+    if ( e.key === 'Escape' && $( '#site-menu .is-open' ).length > 0 ) {
+        close( $('#site-menu .is-open') )
+    }
+} )
+
+
+/*
+    Close when clicked outside the menu
+ */
+$document.on( 'click', function ( e ) {
+    if ( ! $( e.target ).closest( '#primary-menu' ).length ) {
+        close( $('#site-menu').find('.is-open') )
     }
 } )
