@@ -15,3 +15,10 @@
 
 	.wp-caption-text
 		margin: .5gr auto 1.5gr auto
+
+/*
+	WordPress captioned images set a static width on the element with inline styles
+	We don't want that:
+ */
+figure.wp-caption
+	width: 100% !important

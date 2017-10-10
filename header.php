@@ -9,17 +9,19 @@
 
 <body <?php body_class(); ?>>
 
-<div id="page" class="site">
 
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'unstyled' ); ?></a>
+<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'unstyled' ); ?></a>
 
-	<header id="header" class="site-header" role="banner">
-		
+<header id="header" class="site-header" role="banner">
+
+	<div class="site-header__inner layout-inner">
 		<?php get_template_part( 'partials/header/branding' ) ?>
 
 		<nav id="site-menu" class="site-menu" role="navigation">
 			<?php get_template_part( 'partials/header/menu' ) ?>
 		</nav><!-- #site-menu -->
+	</div>
 
-	</header><!-- #header -->
+</header><!-- #header -->
 
+<div id="page" class="site layout-inner">

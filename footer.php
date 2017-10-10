@@ -1,3 +1,4 @@
+</div><!-- #page.site.layout-inner -->
 
 <footer id="footer" class="site-footer" role="contentinfo">
 	<div class="site-info">
@@ -11,7 +12,6 @@
 
 </footer><!-- #footer -->
 
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 
