@@ -48,6 +48,7 @@ $document.on( 'click', '.menu-toggle', function ( e ) {
     let $el       = $( this )
     let $dropdown = $( '#primary-menu' )
 
+
     if ( toggle( $dropdown ) ) {
         e.preventDefault()
     }
@@ -68,7 +69,7 @@ $document.on( 'keyup', function ( e ) {
     Close when clicked outside the menu
  */
 $document.on( 'click', function ( e ) {
-    if ( ! $( e.target ).closest( '#primary-menu' ).length ) {
+    if ( ! $( e.target ).closest( '#site-menu' ).length ) {
         close( $('#site-menu').find('.is-open') )
     }
 } )
