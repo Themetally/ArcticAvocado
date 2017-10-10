@@ -9,6 +9,15 @@ function unstyled_is_blog_archive() {
 	);
 }
 
+function unstyled_has_sidebar() {
+
+	return (
+		is_active_sidebar( 'sidebar' )
+		&& ! is_singular()
+	);
+
+}
+
 
 /**
  * Adds custom classes to the array of body classes.
@@ -20,7 +29,7 @@ function unstyled_is_blog_archive() {
 // Quite likely you'll want to uncomment this:
 function unstyled_body_classes( $classes ) {
 
-	if ( is_active_sidebar( 'sidebar' ) ) {
+	if ( unstyled_has_sidebar() ) {
 		$classes[] = 'has-sidebar';
 	}
 
