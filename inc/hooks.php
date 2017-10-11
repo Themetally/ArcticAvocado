@@ -37,6 +37,9 @@ function unstyled_body_classes( $classes ) {
 		$classes[] = 'full-width';
 	}
 
+	if ( is_singular() ) {
+		$classes[] = 'singular';
+	}
 
 	return $classes;
 }
