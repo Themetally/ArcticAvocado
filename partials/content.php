@@ -48,4 +48,3 @@
 	</div>
 
 </article>
-<?php is_archive() ?>
