@@ -5,6 +5,12 @@
 .comments-area
 	margin-bottom: 2gr
 	padding: 1gr 0
+	max-width: $max_width
+	margin-left: auto
+	margin-right: auto
+	
+	.single-post &
+		max-width: $content_width
 
 .comments-title,
 .comment-reply-title
@@ -32,6 +38,7 @@
 		left: -70px
 		width: 50px
 		height: 50px
+		border-radius: 50%
 
 	.children
 		margin-left: 1gr
@@ -40,6 +47,7 @@
 
 .comment-metadata
 	padding-bottom: 1gr
+	font-size: 0sx
 
 .comment-author
 	font-size: 1sx
