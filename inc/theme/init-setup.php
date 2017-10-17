@@ -18,7 +18,7 @@ function unstyled_setup() {
 	/**
 	 * Add image sizes
 	 */
-	$ratio        = 4 / 3;
+	$ratio        = 16 / 9;
 	$large_width  = $GLOBALS['content_width'];
 	$large_height = $large_width / $ratio;
 	$small_width  = $large_width / 3;

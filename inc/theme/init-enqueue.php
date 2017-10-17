@@ -13,7 +13,7 @@ function unstyled_scripts() {
 	 */
 
 	// Enqueue Google Fonts:
-	$google_fonts = array( 'Open Sans:300,400,400i,700,700i', 'Montserrat:400,700' );
+	$google_fonts = array( 'Open Sans:300,400,400i,700,700i', 'Montserrat:400,500,600,700' );
 	wp_enqueue_style( 'unstyled-fonts', unstyled_fonts_url( $google_fonts ) );
 
 	// Theme Styles

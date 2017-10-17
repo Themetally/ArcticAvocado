@@ -4,16 +4,28 @@
 	padding: 1gr
 
 .blog .post
-	padding-bottom: 3gr
-	margin-bottom: 3gr
+	font-size: 0sx
+
+	.entry-title
+		margin-bottom: .5gr
+
+	.entry-excerpt
+		margin-bottom: 1.5gr
 
 	.read-more
 		text-transform: uppercase
-		font-weight: 700
+		font-weight: 500
 		font-family: $font_alt
 
 	.wp-post-image
 		width: 100%
+
+	.category-links
+		font-weight: 400
+		letter-spacing: -.01em
+		margin-bottom: 1gr
+		&, a
+			color: $gray_light
 
 
 +hasgrid()
@@ -24,19 +36,22 @@
 
 		grid-template-columns: 1fr 1fr
 		@media $desk
-			grid-template-columns: repeat( auto-fill, minmax(290px, 1fr) )
+			grid-template-columns: repeat( auto-fit, minmax(320px, 1fr) )
 
 		@media $palm
 			display: block
+			.post
+				margin-bottom: 1gr
+
 	.blog
 		.entry-title
 			font-size: 1sx
 			line-height: auto
+			font-weight: 500
 		.post
 			background-color: $white
 			padding: 1gr
 			margin: 0
-			border-bottom: 4px solid $dark
 			border-radius: 2px
 			grid-column: span 1
 
@@ -46,7 +61,7 @@
 	@media $large_desk
 		.blog:not(.paged) .post:first-child
 			display: flex
-			grid-column: span 3
+			grid-column: 1 / -2
 
 			.entry-header
 				flex: 6
@@ -65,3 +80,6 @@
 			.entry-footer
 				margin: 0
 
+	@media $larger_desk
+		.blog:not(.paged) .post:first-child
+			grid-column: span 3

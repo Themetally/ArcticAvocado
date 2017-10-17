@@ -20,29 +20,36 @@ dfn, cite, em, i
 
 blockquote
 	position: relative
-	margin-top: 1gr
-	margin-bottom: 2gr
-	padding: 1gr 1.5gr 1gr 3gr
-	font-style: italic
+	margin: 2gr auto
+	padding: 2gr
+	background-color: $white
+	border-radius: 2px
 	p
-		margin: 0
+		margin: 0 auto
 
-	&:before
+	&:before, &:after
 		position: absolute
-		font-family: serif
-		opacity: .5
-		top: -1rem
-		left: -.1em
-		content: "“"
 		font-size: 8sx
 		line-height: 100%
+		color: $accent_alt
+		opacity: .1
 
+	&:before
+		top: .5rem
+		left: 1rem
+		content: "❝"
+
+
+	&:after
+		bottom: -.5rem
+		right: 1rem
+		content: "❞"
 
 address
 	margin-bottom: 1gr
 
 pre
-	background: $bright
+	background: $white
 	font-family: "Courier 10 Pitch", Courier, monospace
 	margin-bottom: 1gr
 	padding: 2gr

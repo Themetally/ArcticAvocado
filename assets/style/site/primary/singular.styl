@@ -2,35 +2,51 @@
  *## Posts and pages
  *-------------------------------------------------------------- */
 
-.entry-content
-	clearfix()
+.singular .site
+	width: 100%
 
+.singular
+	.site-header
+		margin-bottom: 0
+
+	.site
+		width: 100%
+
+	.entry-content
+		max-width: 60rem
+		margin-left: auto
+		margin-right: auto
+		clearfix()
+
+	.entry-header
+		background-color: $white
+		padding: 2gr
+		margin-bottom: 3gr
+		text-align: center
+
+	.entry-title
+		font-weight: 600
+		letter-spacing: 0
+		font-size: 8sx
+		line-height: auto
+
+/*
+	Post/Page content style ( typography, images, etc. )
+ */
+.entry-content
 	a
+
 		text-decoration: none
 
 		&:focus,
 		&:hover
 			opacity: .8
 
-
-.entry-title
-	font-size: 3sx
-	line-height: auto
-	margin-bottom: 0.5gr
-
-.entry-excerpt
-	margin-bottom: 1.5gr
-
-.post .category-links
-	font-weight: 400
-	letter-spacing: -.01em
-	margin-bottom: 1gr
-	&, a
-
-		color: $gray_light
+	h1, h2, h3, h4, h5, h6
+		margin-bottom: 2 gr
 
 .entry-footer
-	margin-bottom: 1gr
+	margin-bottom: 1 gr
 	line-height: auto
 
 	.posted-on
@@ -40,17 +56,15 @@
 	img
 		display: block
 
-
-
 /*--------------------------------------------------------------
  * Byline, Comments, Edit link
  *--------------------------------------------------------------*/
 .byline::after
-	margin: 0 .25gr
+	margin: 0 .25 gr
 
 .comments-link, .edit-link
 	&::before
-		margin: 0 .25gr
+		margin: 0 .25 gr
 
 .single, .group-blog
 	.byline
