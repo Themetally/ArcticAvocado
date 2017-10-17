@@ -29,25 +29,28 @@
 
 .comment-meta
 	position: relative
-	margin-left: 70px
 
 
 .comment
 	.avatar
 		position: absolute
-		left: -70px
-		width: 50px
-		height: 50px
+		left: calc(-50px - 1gr)
+		width: 2gr
+		height: @width
 		border-radius: 50%
 
 	.children
-		margin-left: 1gr
+		margin-left: 3gr
 		padding-left: 0
 
 
 .comment-metadata
 	padding-bottom: 1gr
 	font-size: 0sx
+	a
+		opacity: .5
+		&:hover
+			opacity: 1
 
 .comment-author
 	font-size: 1sx
@@ -56,10 +59,11 @@
 
 .reply
 	margin-bottom: 1gr
-	text-align: right
-	a
-		@extend $button--small
-		margin-bottom: -2px
+	font-weight: 500
+	font-family: $font_alt
+	text-transform: uppercase
+	font-size: 0sx
+
 
 .comment-content
 	ol
