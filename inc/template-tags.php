@@ -12,9 +12,9 @@ if ( ! function_exists( 'unstyled_the_tags' ) ) {
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'unstyled' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ' ', 'unstyled' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'unstyled' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Tags: %1$s', 'unstyled' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 
 
@@ -128,5 +128,25 @@ if ( ! function_exists( 'unstyled_posted_on' ) ) {
 			'</span>'
 		);
 
+	}
+}
+
+if ( ! function_exists( "unstyled_post_navigation" ) ) {
+	function unstyled_post_navigation() {
+
+		// Check if whe have posts to navigate to.
+		$previous = get_previous_post_link( '<div class="nav-previous"><span>' . esc_html__( 'Previous', 'unstyled' ) . ' </span>%link</div>' );
+		$next     = get_next_post_link( '<div class="nav-next"><span>' . esc_html__( 'Next', 'unstyled' ) . ' </span>%link</div>' );
+
+		// Return if there are none.
+		if ( ! $previous && ! $next ) {
+			return;
+		}
+
+		// Create the markup for the links.
+		$html = _navigation_markup( $previous . $next, 'post-navigation' );
+
+		// Filter and echo the navigation.
+		echo apply_filters( 'unstyled_post_navigation', $html ); // wpcs: xss ok.
 	}
 }

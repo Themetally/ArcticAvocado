@@ -6,13 +6,35 @@
 .post-navigation,
 .paging-navigation
 	margin-top: 3gr
+	max-width: $content_width
+	margin-left: auto
+	margin-right: auto
+	font-size: 0sx
 
 	.nav-links
 		display: flex
 		justify-content: center
 
-	.nav-links a
-		@extends $button
+	.nav-links > div
+		flex: 50%
+		background-color: $white
+		border-radius: 2px
+		position: relative
+		padding: 1gr
 
 	.nav-previous
 		margin-right: 1gr
+
+	.nav-links span
+		display: block
+		font-weight: 500
+		font-family: $font_alt
+
+	/* This makes the a element cover the parent div */
+	.nav-links a::after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
