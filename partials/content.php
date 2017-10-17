@@ -16,6 +16,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
+	<?php the_post_thumbnail() ?>
 
 	<div <?php post_class(); ?>>
 

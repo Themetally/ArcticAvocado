@@ -13,16 +13,22 @@
 		width: 100%
 
 	.entry-content
-		max-width: 60rem
+		max-width: $max_width
 		margin-left: auto
 		margin-right: auto
 		clearfix()
 
 	.entry-header
 		background-color: $white
-		padding: 2gr
+		padding: 2gr 2gr
 		margin-bottom: 3gr
 		text-align: center
+
+		min-height: 50vh
+		display: flex
+		align-items: center
+		flex-direction: column
+
 
 	.entry-title
 		font-weight: 600
