@@ -4,7 +4,7 @@
 /**
  * Enqueue scripts and styles.
  */
-function unstyled_scripts() {
+function gridly_scripts() {
 
 	$version = wp_get_theme()->get( 'Version' );
 
@@ -14,21 +14,21 @@ function unstyled_scripts() {
 
 	// Enqueue Google Fonts:
 	$google_fonts = array( 'Open Sans:300,400,400i,700,700i', 'Montserrat:400,500,600,700' );
-	wp_enqueue_style( 'unstyled-fonts', unstyled_fonts_url( $google_fonts ) );
+	wp_enqueue_style( 'gridly-fonts', gridly_fonts_url( $google_fonts ) );
 
 	// Theme Styles
-	wp_enqueue_style( 'unstyled-style', get_template_directory_uri() . '/build/theme-style.css', $version );
+	wp_enqueue_style( 'gridly-style', get_template_directory_uri() . '/build/theme-style.css', $version );
 
 
 	/**
 	 * === Script ===
 	 */
 	// Main theme javascript file
-	wp_enqueue_script( 'unstyled-script', get_template_directory_uri() . '/build/theme-script.js', array( 'jquery' ), $version, true );
+	wp_enqueue_script( 'gridly-script', get_template_directory_uri() . '/build/theme-script.js', array( 'jquery' ), $version, true );
 
 
 	wp_enqueue_script(
-		'unstyled-skip-link-focus-fix',
+		'gridly-skip-link-focus-fix',
 		get_template_directory_uri() . '/build/skip-link-focus-fix.js',
 		array(),
 		'20151215',
@@ -44,8 +44,8 @@ function unstyled_scripts() {
 	 * === Localization ===
 	 */
 	//	wp_localize_script(
-	//		'unstyled-script',
-	//		'__unstyled',
+	//		'gridly-script',
+	//		'__gridly',
 	//		array(
 	//			// do things
 	//		)
@@ -53,4 +53,4 @@ function unstyled_scripts() {
 	//	);
 }
 
-add_action( 'wp_enqueue_scripts', 'unstyled_scripts' );
+add_action( 'wp_enqueue_scripts', 'gridly_scripts' );

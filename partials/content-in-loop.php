@@ -4,15 +4,15 @@
  *
  * @link    https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Unstyled
+ * @package Gridly
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-header">
-		<?php unstyled_the_category_list(); ?>
-		<?php the_post_thumbnail( unstyled_get_dynamic_thumbnail_size() ) ?>
+		<?php gridly_the_category_list(); ?>
+		<?php the_post_thumbnail( gridly_get_dynamic_thumbnail_size() ) ?>
 	</div>
 
 	<div class="entry-summary">
@@ -23,8 +23,8 @@
 		</div>
 
 		<footer class="entry-footer">
-			<?php unstyled_posted_on(); ?>
-			<a href="<?php the_permalink() ?>" class="read-more"><?php esc_html_e( 'Read More', 'unstyled' ); ?></a>
+			<?php gridly_posted_on(); ?>
+			<a href="<?php the_permalink() ?>" class="read-more"><?php esc_html_e( 'Read More', 'gridly' ); ?></a>
 		</footer><!-- .entry-footer -->
 
 	</div><!-- .entry-summary -->

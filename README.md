@@ -1,2 +1,2 @@
-# Arctic Avocado
+# Gridly
 WordPress theme in development....

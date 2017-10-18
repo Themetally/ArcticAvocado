@@ -1,4 +1,4 @@
-=== Unstyled ===
+=== Gridly ===
 
 Contributors: justnorris
 Tags: theme-options, custom-menu, post-formats, threaded-comments
@@ -11,7 +11,7 @@ License URI: LICENSE
 
 == Description ==
 
-Unstyled is a modern theme built with CSS Grids and Flexbox. Ready for the future.
+Gridly is a modern theme built with CSS Grids and Flexbox. Ready for the future.
 
 == Installation ==
 

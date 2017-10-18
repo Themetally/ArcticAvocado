@@ -3,7 +3,7 @@
 /*
  * This function is going to return true only once
  */
-function unstyled_is_first_post() {
+function gridly_is_first_post() {
 
 	global $wp_query;
 	global $paged;
@@ -12,12 +12,12 @@ function unstyled_is_first_post() {
 }
 
 
-function unstyled_get_dynamic_thumbnail_size() {
+function gridly_get_dynamic_thumbnail_size() {
 
-	if ( unstyled_is_first_post() ) {
-		return 'unstyled-blog-large';
+	if ( gridly_is_first_post() ) {
+		return 'gridly-blog-large';
 	}
 
-	return 'unstyled-blog-small';
+	return 'gridly-blog-small';
 
 }

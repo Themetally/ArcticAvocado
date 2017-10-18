@@ -4,7 +4,7 @@
 	<div class="site-info">
 		<span class="sitemeta">
 				<?php printf(
-					esc_html__( 'Arctic Avocado theme by %1$s.', 'unstyled' ),
+					esc_html__( 'Gridly theme by %1$s.', 'gridly' ),
 					'<a href="https://themetally.com">Themetally</a>'
 				); ?>
 		</span>

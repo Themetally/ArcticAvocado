@@ -4,7 +4,7 @@
 /**
  * Register custom fonts.
  */
-function unstyled_fonts_url( $font_families ) {
+function gridly_fonts_url( $font_families ) {
 
 	$font_url = '';
 	$fonts    = implode( $font_families, '|' );
@@ -13,7 +13,7 @@ function unstyled_fonts_url( $font_families ) {
 	Translators: If there are characters in your language that are not supported
 	by chosen font(s), translate this to 'off'. Do not translate into your own language.
 	 */
-	if ( 'off' !== _x( 'on', 'Google fonts: "on" or "off"', 'unstyled' ) ) {
+	if ( 'off' !== _x( 'on', 'Google fonts: "on" or "off"', 'gridly' ) ) {
 		$font_url = add_query_arg( 'family', urlencode( $fonts ), "//fonts.googleapis.com/css" );
 	}
 
@@ -30,9 +30,9 @@ function unstyled_fonts_url( $font_families ) {
  *
  * @return array $urls           URLs to print for resource hints.
  */
-function unstyled_resource_hints( $urls, $relation_type ) {
+function gridly_resource_hints( $urls, $relation_type ) {
 
-	if ( wp_style_is( 'unstyled-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+	if ( wp_style_is( 'gridly-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
 		$urls[] = array(
 			'href' => 'https://fonts.gstatic.com',
 			'crossorigin',
@@ -42,4 +42,4 @@ function unstyled_resource_hints( $urls, $relation_type ) {
 	return $urls;
 }
 
-add_filter( 'wp_resource_hints', 'unstyled_resource_hints', 10, 2 );
+add_filter( 'wp_resource_hints', 'gridly_resource_hints', 10, 2 );
