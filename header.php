@@ -17,9 +17,11 @@
 	<div class="site-header__inner layout-inner">
 		<?php get_template_part( 'partials/header/branding' ) ?>
 
-		<nav id="site-menu" class="site-menu" role="navigation">
-			<?php get_template_part( 'partials/header/menu' ) ?>
-		</nav><!-- #site-menu -->
+		<?php if ( has_nav_menu( 'primary' ) ): ?>
+			<nav id="site-menu" class="site-menu" role="navigation">
+				<?php get_template_part( 'partials/header/menu' ) ?>
+			</nav><!-- #site-menu -->
+		<?php endif; ?>
 	</div>
 
 </header><!-- #header -->
