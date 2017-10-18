@@ -35,7 +35,7 @@
 				?></p>
 		<?php else : ?>
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for.', 'unstyled' ); ?></p>
-			<p><a class="button" href="<?php echo home_url('/') ?>"><?php esc_html_e('Back Home','MELON_TXT'); ?></a></p>
+			<p><a class="button" href="<?php echo home_url('/') ?>"><?php esc_html_e('Back Home','unstyled'); ?></a></p>
 		<?php endif; ?>
 	</div><!-- .page-content -->
 

@@ -9,7 +9,7 @@
 		if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php unstyled_posted_on(); ?>
-				<?php esc_html_e( 'in', 'MELON_TXT' ); ?>
+				<?php esc_html_e( 'in', 'unstyled' ); ?>
 				<?php unstyled_the_category_list() ?>
 			</div><!-- .entry-meta -->
 			<?php

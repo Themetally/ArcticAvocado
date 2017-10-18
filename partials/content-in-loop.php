@@ -24,7 +24,7 @@
 
 		<footer class="entry-footer">
 			<?php unstyled_posted_on(); ?>
-			<a href="<?php the_permalink() ?>" class="read-more"><?php esc_html_e( 'Read More', 'MELON_TXT' ); ?></a>
+			<a href="<?php the_permalink() ?>" class="read-more"><?php esc_html_e( 'Read More', 'unstyled' ); ?></a>
 		</footer><!-- .entry-footer -->
 
 	</div><!-- .entry-summary -->
