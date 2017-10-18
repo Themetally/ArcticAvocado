@@ -33,20 +33,11 @@
 					esc_url( admin_url( 'post-new.php' ) )
 				);
 				?></p>
-
-		<?php elseif ( is_search() ) : ?>
-
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'unstyled' ); ?></p>
-			<?php
-			get_search_form();
-
-		else : ?>
-
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'unstyled' ); ?></p>
-			<?php
-			get_search_form();
-
-		endif; ?>
+		<?php else : ?>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for.', 'unstyled' ); ?></p>
+			<p><a class="button" href="<?php echo home_url('/') ?>"><?php esc_html_e('Back Home','MELON_TXT'); ?></a></p>
+		<?php endif; ?>
 	</div><!-- .page-content -->
-	
+
 </section><!-- .no-results -->
+
