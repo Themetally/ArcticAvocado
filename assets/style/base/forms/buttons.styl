@@ -1,16 +1,17 @@
 $button
 	border: 0
-	background-color: $black
+	background-color: $accent_alt
 	color: $white
 	padding: 0.5gr 1.5gr
 	line-height: auto
 	outline: 0
 	border-radius: 2em
-	transition: all .48s ease
+	transition: all .33s ease
 	font-size: 0sx
+	box-shadow: $shadow
 
 	&:hover
-		background-color: lighten($black, 15)
+		background-color: $accent
 
 	&:focus
 		background-color: lighten($black, 25)
@@ -35,6 +36,7 @@ $button--tag
 	padding: .125gr .5gr
 	text-decoration: none
 	background-color: $white
+	box-shadow: $shadow
 
 button,
 input[type="button"],
@@ -43,7 +45,9 @@ input[type="submit"]
 	@extend $button
 
 	&:hover,
-	&:active,
-	&:focus
-		background-color: $dark
+	&:active
+		background-color: $accent
 		color: $white
+
+	&:focus
+		transform: translateY(3px)

@@ -25,7 +25,7 @@
 		letter-spacing: -.01em
 		margin-bottom: 1gr
 		&, a
-			color: $gray_light
+			@extend $link--textual
 
 
 +hasgrid()
@@ -54,6 +54,7 @@
 			margin: 0
 			border-radius: 2px
 			grid-column: span 1
+			box-shadow: $shadow
 
 		.posts-navigation
 			grid-column: 1 / -1

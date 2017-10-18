@@ -4,17 +4,18 @@
 
 // Generic Links
 a
-	color: $link_color
+	color: $accent_alt
 	text-decoration: none
 	outline: 0
 	transition: color .2s ease
-
-	&:visited
-		color: $dark
-
 
 	&:hover, &:focus, &:active
 		color: $accent
 
 	&:hover, &:active
 		outline: 0
+
+$link--textual
+	color: $text_color
+	&:hover, &:focus, &:active
+		color: $accent
