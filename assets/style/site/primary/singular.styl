@@ -75,3 +75,14 @@
 .single, .group-blog
 	.byline
 		display: inline
+
+
+
+/*--------------------------------------------------------------
+ * Oversized Elements
+ *--------------------------------------------------------------*/
+@media screen and (min-width: 67rem)
+	.gallery, .post .attachment-post-thumbnail, .entry-content blockquote, pre
+		margin-left: -5gr
+		width: calc(100% + 10gr)
+		max-width: unset

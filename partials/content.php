@@ -9,16 +9,17 @@
 		if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php unstyled_posted_on(); ?>
-				<?php esc_html_e('in','MELON_TXT'); ?>
+				<?php esc_html_e( 'in', 'MELON_TXT' ); ?>
 				<?php unstyled_the_category_list() ?>
 			</div><!-- .entry-meta -->
 			<?php
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php the_post_thumbnail() ?>
 
 	<div <?php post_class(); ?>>
+
+		<?php the_post_thumbnail() ?>
 
 		<div class="entry-content">
 			<?php
