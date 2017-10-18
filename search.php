@@ -23,7 +23,7 @@ endif;
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'partials/content', 'in-loop' );
+				get_template_part( 'partials/content', 'list' );
 
 			endwhile;
 
