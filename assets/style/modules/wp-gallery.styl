@@ -5,6 +5,7 @@
 .gallery
 	margin: 1gr 0
 
+
 .gallery-item
 	display: inline-block
 	text-align: center
@@ -55,3 +56,36 @@
 	display: block
 	margin: 0
 	border: none
+
+
+
++hasgrid()
+	.gallery
+		display: grid
+		grid-template-columns: 1fr
+		grid-gap: .5gr
+
+		.gallery-item
+			max-width: unset
+			width: 100%
+			padding: 0
+
+		a, img
+			display: block
+
+	.gallery-columns-2
+		grid-template-columns: repeat(2, 1fr)
+	.gallery-columns-3
+		grid-template-columns: repeat(3, 1fr)
+	.gallery-columns-4
+		grid-template-columns: repeat(4, 1fr)
+	.gallery-columns-5
+		grid-template-columns: repeat(5, 1fr)
+	.gallery-columns-6
+		grid-template-columns: repeat(6, 1fr)
+	.gallery-columns-7
+		grid-template-columns: repeat(7, 1fr)
+	.gallery-columns-8
+		grid-template-columns: repeat(8, 1fr)
+	.gallery-columns-9
+		grid-template-columns: repeat(9, 1fr)
