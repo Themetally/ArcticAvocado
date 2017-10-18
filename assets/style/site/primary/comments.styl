@@ -12,10 +12,31 @@
 	.single-post &
 		max-width: $content_width
 
-.comments-title,
-.comment-reply-title
+.comment-respond
+	background-color: $white
+	border-radius: 2px
+	padding: 1gr
+	font-size: 0sx
+
+.comments-title
+	margin-bottom: 2gr
 	font-size: 2sx
 	line-height: auto
+
+.comment-reply-title
+	font-size: 1sx
+	font-weight: 600
+	small
+		display: block
+
+	small a
+		font-weight: 400
+		text-transform: uppercase
+		letter-spacing: 0px
+		font-size: .875em
+		font-family: $font
+		color: $gray_light
+
 
 .comment-list
 	padding: 0
@@ -81,13 +102,7 @@
 	a
 		font-weight: 500
 	.form-submit
-		text-align: right
-
-	.form-submit input
-		padding: .25gr 1gr
-		line-height: auto
-		text-decoration: none
-
+		text-align: center
 	label
 		display: block
 
