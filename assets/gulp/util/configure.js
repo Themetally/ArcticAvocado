@@ -7,6 +7,7 @@ export default ( theme ) => {
 
         // General Config
         url       : theme.development_url,
+        theme     : theme,
         build     : './build',
         production: !!util.env.production,
 
@@ -28,7 +29,14 @@ export default ( theme ) => {
                 lastTranslator: `${theme.author} <${theme.email}>`,
                 team          : `${theme.author} <${theme.email}>`,
             }
-        }
+        },
+
+        // Theme Packaging:
+        pack: {
+            excludes     : theme.exclude_files,
+            zip_file_name: `${theme.slug}.zip`,
+            destination  : '../',
+        },
     }
 
     // Allow to override config from YAML:
