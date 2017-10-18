@@ -35,6 +35,7 @@ function unstyled_body_classes( $classes ) {
 
 	if ( unstyled_is_blog_archive() ) {
 		$classes[] = 'full-width';
+		$classes[] = 'layout--grid';
 	}
 
 	if ( is_singular() ) {

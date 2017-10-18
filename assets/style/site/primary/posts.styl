@@ -3,7 +3,7 @@
 	background-color: transparentify($bright, 0.02)
 	padding: 1gr
 
-.blog .post
+.layout--grid .post
 	font-size: 0sx
 
 	.entry-title
@@ -29,26 +29,29 @@
 
 
 +hasgrid()
-	.blog .site-content
-		display: grid
-		grid-gap: 1gr
-		align-content: start
+	.layout--grid
+		.site-content
+			display: grid
+			grid-gap: 1gr
+			align-content: start
 
-		grid-template-columns: 1fr 1fr
-		@media $desk
-			grid-template-columns: repeat( auto-fit, minmax(320px, 1fr) )
+			grid-template-columns: 1fr 1fr
+			@media $desk
+				grid-template-columns: repeat( auto-fit, minmax(320px, 1fr) )
 
-		@media $palm
-			display: block
-			.post
-				margin-bottom: 1gr
+			@media $palm
+				display: block
+				.post
+					margin-bottom: 1gr
+		.page-header
+			grid-column: 1/-1
 
-	.blog
 		.entry-title
 			font-size: 1sx
 			line-height: auto
 			font-weight: 500
-		.post
+
+		.site-content > article
 			background-color: $white
 			padding: 1gr
 			margin: 0
@@ -59,8 +62,13 @@
 		.posts-navigation
 			grid-column: 1 / -1
 
+
+	/*--------------------------------------------------------------
+	 * Increase the size of first post in the blog
+	 * CSS Specificity is quite high here....
+	 *--------------------------------------------------------------*/
 	@media $large_desk
-		.blog:not(.paged) .post:first-child
+		.layout--grid.blog:not(.paged) .post:first-child
 			display: flex
 			grid-column: 1 / -2
 
@@ -82,5 +90,5 @@
 				margin: 0
 
 	@media $larger_desk
-		.blog:not(.paged) .post:first-child
+		.layout--grid.blog:not(.paged) .post:first-child
 			grid-column: span 3
