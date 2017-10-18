@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
 
 
-<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'gridly' ); ?></a>
+<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'griddle' ); ?></a>
 
 <header id="header" class="site-header" role="banner">
 

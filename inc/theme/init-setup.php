@@ -6,13 +6,13 @@
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function gridly_setup() {
+function griddle_setup() {
 
 	/**
 	 * Make theme available for translation.
 	 * @link https://codex.wordpress.org/Function_Reference/load_theme_textdomain
 	 */
-	load_theme_textdomain( 'gridly', get_template_directory() . '/assets/languages' );
+	load_theme_textdomain( 'griddle', get_template_directory() . '/assets/languages' );
 
 
 	/**
@@ -24,8 +24,8 @@ function gridly_setup() {
 	$small_width  = $large_width / 3;
 	$small_height = $small_width / $ratio;
 
-	add_image_size( 'gridly-blog-large', $large_width, $large_height, true );
-	add_image_size( 'gridly-blog-small', $small_width, $small_height, true );
+	add_image_size( 'griddle-blog-large', $large_width, $large_height, true );
+	add_image_size( 'griddle-blog-small', $small_width, $small_height, true );
 
 
 	/**
@@ -33,7 +33,7 @@ function gridly_setup() {
 	 */
 	register_nav_menus(
 		array(
-			'primary' => esc_html__( 'Primary', 'gridly' ),
+			'primary' => esc_html__( 'Primary', 'griddle' ),
 		)
 	);
 
@@ -45,13 +45,13 @@ function gridly_setup() {
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function gridly_register_sidebars() {
+function griddle_register_sidebars() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'gridly' ),
+			'name'          => esc_html__( 'Sidebar', 'griddle' ),
 			'id'            => 'sidebar',
-			'description'   => esc_html__( 'Add widgets here.', 'gridly' ),
+			'description'   => esc_html__( 'Add widgets here.', 'griddle' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -73,7 +73,7 @@ function gridly_register_sidebars() {
  * `html5`:                 https://codex.wordpress.org/Theme_Markup
  * `custom-logo`:           https://developer.wordpress.org/themes/functionality/custom-logo/
  */
-function gridly_add_theme_supports() {
+function griddle_add_theme_supports() {
 
 	// Add theme support for Custom Logo
 	add_theme_support(
@@ -113,9 +113,9 @@ function gridly_add_theme_supports() {
  *
  * @global int $content_width
  */
-function gridly_content_width() {
+function griddle_content_width() {
 
-	$GLOBALS['content_width'] = apply_filters( 'gridly_content_width', 1200 );
+	$GLOBALS['content_width'] = apply_filters( 'griddle_content_width', 1200 );
 }
 
 
@@ -124,7 +124,7 @@ function gridly_content_width() {
  * Setup hooks:
  *
  */
-add_action( 'after_setup_theme', 'gridly_content_width', 0 ); // Priority 0 to make it available to lower priority callbacks.
-add_action( 'after_setup_theme', 'gridly_setup' );
-add_action( 'after_setup_theme', 'gridly_add_theme_supports' );
-add_action( 'widgets_init', 'gridly_register_sidebars' );
+add_action( 'after_setup_theme', 'griddle_content_width', 0 ); // Priority 0 to make it available to lower priority callbacks.
+add_action( 'after_setup_theme', 'griddle_setup' );
+add_action( 'after_setup_theme', 'griddle_add_theme_supports' );
+add_action( 'widgets_init', 'griddle_register_sidebars' );

@@ -1,2 +1,2 @@
-# Gridly
+# Griddle
 WordPress theme in development....

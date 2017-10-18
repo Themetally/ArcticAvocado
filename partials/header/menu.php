@@ -1,6 +1,6 @@
 <button id="site-menu" class="menu-toggle button"><?php esc_html_e(
 		'Menu',
-		'gridly'
+		'griddle'
 	); ?></button>
 
 <div id="primary-menu" class="site-menu__inner">

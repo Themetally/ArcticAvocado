@@ -4,7 +4,7 @@
  *
  * @link    https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Gridly
+ * @package Griddle
  */
 
 ?>
@@ -20,7 +20,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gridly' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'griddle' ),
 				'after'  => '</div>',
 			)
 		);
@@ -33,7 +33,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'gridly' ),
+					esc_html__( 'Edit %s', 'griddle' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
 				'<span class="edit-link">',

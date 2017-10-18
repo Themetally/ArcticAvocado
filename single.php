@@ -4,7 +4,7 @@
  *
  * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Gridly
+ * @package Griddle
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 
 			get_template_part( 'partials/content', get_post_format() );
 
-			gridly_post_navigation();
+			griddle_post_navigation();
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :

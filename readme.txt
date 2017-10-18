@@ -1,4 +1,4 @@
-=== Gridly ===
+=== Griddle ===
 
 Contributors: justnorris
 Tags: theme-options, custom-menu, post-formats, threaded-comments
@@ -11,7 +11,7 @@ License URI: LICENSE
 
 == Description ==
 
-Gridly is a modern theme built with CSS Grids and Flexbox. Ready for the future.
+Griddle is a modern theme built with CSS Grids and Flexbox. Ready for the future.
 
 == Installation ==
 

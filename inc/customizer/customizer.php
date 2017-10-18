@@ -1,8 +1,8 @@
 <?php
 /**
- * Gridly Theme Customizer
+ * Griddle Theme Customizer
  *
- * @package Gridly
+ * @package Griddle
  */
 
 /**
@@ -10,21 +10,21 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function gridly_customize_register( $wp_customize ) {
+function griddle_customize_register( $wp_customize ) {
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
 
-add_action( 'customize_register', 'gridly_customize_register' );
+add_action( 'customize_register', 'griddle_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function gridly_customize_preview_js() {
+function griddle_customize_preview_js() {
 
-	wp_enqueue_script( 'gridly_customizer', get_template_directory_uri() . '/build/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'griddle_customizer', get_template_directory_uri() . '/build/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 
-add_action( 'customize_preview_init', 'gridly_customize_preview_js' );
+add_action( 'customize_preview_init', 'griddle_customize_preview_js' );

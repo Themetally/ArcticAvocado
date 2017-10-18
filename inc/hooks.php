@@ -1,6 +1,6 @@
 <?php
 
-function gridly_is_blog_archive() {
+function griddle_is_blog_archive() {
 
 	return (
 		'post' == get_post_type()
@@ -9,7 +9,7 @@ function gridly_is_blog_archive() {
 	);
 }
 
-function gridly_has_sidebar() {
+function griddle_has_sidebar() {
 
 	return (
 		is_active_sidebar( 'sidebar' )
@@ -27,13 +27,13 @@ function gridly_has_sidebar() {
  * @return array
  */
 // Quite likely you'll want to uncomment this:
-function gridly_body_classes( $classes ) {
+function griddle_body_classes( $classes ) {
 
-	if ( gridly_has_sidebar() ) {
+	if ( griddle_has_sidebar() ) {
 		$classes[] = 'has-sidebar';
 	}
 
-	if ( gridly_is_blog_archive() ) {
+	if ( griddle_is_blog_archive() ) {
 		$classes[] = 'full-width';
 		$classes[] = 'layout--grid';
 	}
@@ -45,37 +45,37 @@ function gridly_body_classes( $classes ) {
 	return $classes;
 }
 
-add_filter( 'body_class', 'gridly_body_classes' );
+add_filter( 'body_class', 'griddle_body_classes' );
 
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function gridly_pingback_header() {
+function griddle_pingback_header() {
 
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
 
-add_action( 'wp_head', 'gridly_pingback_header' );
+add_action( 'wp_head', 'griddle_pingback_header' );
 
 
 /**
  * Customize ellipsis at end of excerpts.
  */
-function gridly_excerpt_more( $more ) {
+function griddle_excerpt_more( $more ) {
 
 	return "...";
 }
 
-add_filter( 'excerpt_more', 'gridly_excerpt_more' );
+add_filter( 'excerpt_more', 'griddle_excerpt_more' );
 
 
 /* Change Excerpt length */
-function gridly_adjust_excerpt_length( $length ) {
+function griddle_adjust_excerpt_length( $length ) {
 
 	return 21;
 }
 
-add_filter( 'excerpt_length', 'gridly_adjust_excerpt_length' );
+add_filter( 'excerpt_length', 'griddle_adjust_excerpt_length' );

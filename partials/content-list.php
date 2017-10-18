@@ -4,7 +4,7 @@
  *
  * @link    https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Gridly
+ * @package Griddle
  */
 ?>
 
@@ -18,8 +18,8 @@
 		</div>
 
 		<footer class="entry-footer">
-			<?php gridly_posted_on(); ?>
-			<a href="<?php the_permalink() ?>" class="read-more"><?php esc_html_e( 'Read More', 'gridly' ); ?></a>
+			<?php griddle_posted_on(); ?>
+			<a href="<?php the_permalink() ?>" class="read-more"><?php esc_html_e( 'Read More', 'griddle' ); ?></a>
 		</footer><!-- .entry-footer -->
 
 	</div><!-- .entry-summary -->

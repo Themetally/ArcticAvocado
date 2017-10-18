@@ -4,7 +4,7 @@
  *
  * @link    https://jetpack.com/
  *
- * @package Gridly
+ * @package Griddle
  */
 
 /**
@@ -13,14 +13,14 @@
  * See: https://jetpack.com/support/infinite-scroll/
  * See: https://jetpack.com/support/responsive-videos/
  */
-function gridly_jetpack_setup() {
+function griddle_jetpack_setup() {
 
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'primary',
-			'render'    => 'gridly_infinite_scroll_render',
+			'render'    => 'griddle_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -29,12 +29,12 @@ function gridly_jetpack_setup() {
 	add_theme_support( 'jetpack-responsive-videos' );
 }
 
-add_action( 'after_setup_theme', 'gridly_jetpack_setup' );
+add_action( 'after_setup_theme', 'griddle_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function gridly_infinite_scroll_render() {
+function griddle_infinite_scroll_render() {
 
 	while ( have_posts() ) {
 		the_post();

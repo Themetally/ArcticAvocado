@@ -16,7 +16,7 @@ endif;
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php gridly_search_results_title(); ?></h1>
+				<h1 class="page-title"><?php griddle_search_results_title(); ?></h1>
 			</header><!-- .page-header -->
 
 			<?php

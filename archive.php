@@ -4,7 +4,7 @@
  *
  * @link    https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Gridly
+ * @package Griddle
  */
 
 get_header(); ?>

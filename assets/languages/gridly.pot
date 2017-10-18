@@ -1,8 +1,8 @@
-# Copyright (C) 2017 Gridly
-# This file is distributed under the same license as the Gridly package.
+# Copyright (C) 2017 Griddle
+# This file is distributed under the same license as the Griddle package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gridly\n"
+"Project-Id-Version: Griddle\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,7 +32,7 @@ msgid "Comments are closed."
 msgstr ""
 
 #: footer.php:7
-msgid "Gridly theme by %1$s."
+msgid "Griddle theme by %1$s."
 msgstr ""
 
 #: header.php:13
