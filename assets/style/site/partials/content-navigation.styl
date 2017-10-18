@@ -16,14 +16,21 @@
 		justify-content: center
 
 	.nav-links > div
-		flex: 50%
+		flex: 1
 		background-color: $white
 		border-radius: 2px
 		position: relative
 		padding: 1gr
+		min-width: 12rem
+
+		.blog &, .archive &
+			text-align: center
 
 	.nav-previous
 		margin-right: 1gr
+
+	.nav-next
+		text-align: right
 
 	.nav-links span
 		display: block
