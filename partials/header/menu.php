@@ -1,4 +1,4 @@
-<button id="site-menu" class="menu-toggle button"><?php esc_html_e(
+<button id="site-menu" class="site-menu-toggle button"><?php esc_html_e(
 		'Menu',
 		'griddle'
 	); ?></button>

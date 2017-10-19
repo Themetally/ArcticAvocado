@@ -43,7 +43,7 @@ $document.on( 'click', '.menu-item-has-children > a', function ( e ) {
 /*
     Toggle the responsive menu popup
  */
-$document.on( 'click', '.menu-toggle', function ( e ) {
+$document.on( 'click', '#site-menu-toggle', function ( e ) {
 
     let $el       = $( this )
     let $dropdown = $( '#primary-menu' )
