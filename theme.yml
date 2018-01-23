@@ -5,7 +5,7 @@ email: im@justnorris.com
 author: justnorris
 
 # Tell BrowserSync where you're site is at:
-development_url: http://theme.wp
+development_url: http://theme.demmoo.com
 
 # Build Process
 exclude_files:
