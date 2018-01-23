@@ -124,7 +124,7 @@ if ( ! function_exists( 'griddle_posted_on' ) ) {
 				esc_html__( 'Edit %s', 'griddle' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			),
-			' <span class="edit-link"><span class="extra">Admin </span>',
+			' <span class="edit-link">',
 			'</span>'
 		);
 
