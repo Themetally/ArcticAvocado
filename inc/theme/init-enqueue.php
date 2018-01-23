@@ -39,18 +39,6 @@ function griddle_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-
-	/**
-	 * === Localization ===
-	 */
-	//	wp_localize_script(
-	//		'griddle-script',
-	//		'__griddle',
-	//		array(
-	//			// do things
-	//		)
-	//
-	//	);
 }
 
 add_action( 'wp_enqueue_scripts', 'griddle_scripts' );
