@@ -16,3 +16,8 @@ exclude_files:
   - assets/gulp/**
   - assets/style/**
   - README.md
+  - package.json
+  - package-lock.json
+  - .gitignore
+  - .gitmodules
+  - .babelrc

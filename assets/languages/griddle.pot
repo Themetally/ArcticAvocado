@@ -129,3 +129,7 @@ msgstr ""
 #: partials/header/menu.php:1
 msgid "Menu"
 msgstr ""
+
+#: partials/header/menu.php:7
+msgid "Close Menu"
+msgstr ""

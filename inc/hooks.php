@@ -66,6 +66,10 @@ add_action( 'wp_head', 'griddle_pingback_header' );
  */
 function griddle_excerpt_more( $more ) {
 
+	if( is_admin() ) {
+		return $more;
+	}
+
 	return "...";
 }
 
@@ -74,7 +78,9 @@ add_filter( 'excerpt_more', 'griddle_excerpt_more' );
 
 /* Change Excerpt length */
 function griddle_adjust_excerpt_length( $length ) {
-
+	if( is_admin() ) {
+		return $length;
+	}
 	return 21;
 }
 
