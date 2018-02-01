@@ -39,10 +39,6 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/template-tags.php:15
-msgid " "
-msgstr ""
-
 #: inc/template-tags.php:17
 msgid "Tags: %1$s"
 msgstr ""
