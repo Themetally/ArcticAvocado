@@ -25,3 +25,13 @@ Griddle is a modern theme built with CSS Grids and Flexbox. Ready for the future
 == Changelog ==
 = 1.0 =
 * Initial release
+
+
+== Resources ==
+All Pexels Images mentioned below are licensed under CC-0 License
+* Photo by Tuesday Temptation from Pexels https://www.pexels.com/photo/time-lapse-photography-of-roadway-830858/
+* Photo by Tobi from Pexels https://www.pexels.com/photo/blur-daylight-fashion-female-561028/
+* Photo by Tobi from Pexels https://www.pexels.com/photo/forest-friends-friendship-grass-591216/
+* Photo by Clem Onojeghuo from Pexels https://www.pexels.com/photo/abstract-arrow-art-blur-375894/
+* https://www.pexels.com/photo/women-lying-checking-phone-163112/
+* https://www.pexels.com/photo/forest-friends-friendship-grass-591216/
