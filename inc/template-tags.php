@@ -28,9 +28,9 @@ if ( ! function_exists( 'griddle_the_category_list' ) ) {
 	function griddle_the_category_list() {
 
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'griddle' ) );
+		$categories_list = get_the_category_list();
 		if ( $categories_list && griddle_categorized_blog() ) {
-			printf( '<div class="category-links">' . esc_html__( '%1$s', 'griddle' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+			printf( '<div class="category-links">' . $categories_list . '</div>' ); // WPCS: XSS OK.
 		}
 	}
 }
