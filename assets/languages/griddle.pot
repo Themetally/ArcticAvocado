@@ -47,15 +47,6 @@ msgstr ""
 msgid "Tags: %1$s"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:31
-msgid ", "
-msgstr ""
-
-#: inc/template-tags.php:33
-msgid "%1$s"
-msgstr ""
-
 #: inc/template-tags.php:94
 msgid "Search Results for: %s"
 msgstr ""
