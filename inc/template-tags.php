@@ -12,7 +12,7 @@ if ( ! function_exists( 'griddle_the_tags' ) ) {
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ' ', 'griddle' ) );
+		$tags_list = get_the_tag_list( '', ' ' );
 		if ( $tags_list ) {
 			printf( '<span class="tags-links">' . esc_html__( 'Tags: %1$s', 'griddle' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
@@ -28,7 +28,7 @@ if ( ! function_exists( 'griddle_the_category_list' ) ) {
 	function griddle_the_category_list() {
 
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list();
+		$categories_list = get_the_category_list(', ');
 		if ( $categories_list && griddle_categorized_blog() ) {
 			printf( '<div class="category-links">' . $categories_list . '</div>' ); // WPCS: XSS OK.
 		}
