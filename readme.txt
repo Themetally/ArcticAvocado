@@ -10,7 +10,6 @@ License: GNU General Public License v2 or later
 License URI: LICENSE
 
 == Description ==
-
 Griddle is a modern theme built with CSS Grids and Flexbox. Ready for the future.
 
 == Installation ==
@@ -35,3 +34,8 @@ All Pexels Images mentioned below are licensed under CC-0 License
 * Photo by Clem Onojeghuo from Pexels https://www.pexels.com/photo/abstract-arrow-art-blur-375894/
 * https://www.pexels.com/photo/women-lying-checking-phone-163112/
 * https://www.pexels.com/photo/forest-friends-friendship-grass-591216/
+
+== Copyright ==
+Griddle WordPress Theme, Copyright 2018 Themetally.com
+Griddle is distributed under the terms of the GNU GPL
+
